@@ -120,6 +120,7 @@ function Navbar() {
           transition: "background-color 0.3s ease",
           boxShadow: "none",
           paddingX: { lg: "150px", xl: "250px" },
+          paddingTop: { lg: "18px", xl: "55px" },
         }}
       >
         <Toolbar sx={{ paddingX: { lg: "0px" } }}>
@@ -141,17 +142,32 @@ function Navbar() {
             sx={{
               flexGrow: 1,
               display: {
-                xs: "block",
-                sm: "block",
-                md: "block",
-                lg: "block",
-                rowGap: 2,
+                xs: "flex",
+                sm: "flex",
+                md: "flex",
+                lg: "flex",
+                columnGap: 2,
               },
+              flexDirection: "row",
+              alignItems: { sm: "center" },
+              columnGap: { sm: "14px" },
               order: { xs: 1 },
             }}
           >
-            <Logo sx={{ width: 40, height: 40 }} />
-            <LogoName sx={{ width: 140, height: 40 }} />
+            <Logo
+              sx={{
+                width: "100%",
+                maxWidth: { xs: "40px",sm:"85px", md: "107px", lg: "135px" },
+                height: "auto",
+              }}
+            />
+            <LogoName
+              sx={{
+                width: "100%",
+                maxWidth: { xs: "140px",sm:"150px", md: "189px", lg: "378px" },
+                height: "atuo",
+              }}
+            />
           </Box>
 
           <Box

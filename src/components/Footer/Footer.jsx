@@ -38,7 +38,9 @@ const StyledContainer = styled(Container)(({ theme }) => ({
     padding: "0 50px",
   },
   [theme.breakpoints.up("lg")]: {
-    padding: "0 13%",
+    // padding: "0 13%",
+    marginLeft: "0px",
+    marginRight: "0px",
   },
 }));
 
@@ -106,7 +108,9 @@ const Footer = () => {
   ];
 
   return (
-    <StyledFooter>
+    <StyledFooter
+      sx={{ display: { lg: "flex" }, justifyContent: { lg: "center" } }}
+    >
       <StyledContainer>
         <Grid container spacing={{ xs: 2.5, md: 5 }}>
           {/* Brand and Message */}

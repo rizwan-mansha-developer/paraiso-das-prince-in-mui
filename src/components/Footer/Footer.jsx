@@ -159,7 +159,14 @@ const Footer = () => {
             sx={{ display: { xs: "none", md: "block" } }}
           >
             <SectionTitle>Links</SectionTitle>
-            <Box component="ul" sx={{ "& li": { mb: 1 } }}>
+            <Box
+              component="ul"
+              sx={{
+                "& li": { mb: 1 },
+                listStyleType: "none",
+                paddingInlineStart: "0px",
+              }}
+            >
               {[
                 "About Us",
                 "Our Services",
@@ -184,7 +191,14 @@ const Footer = () => {
             sx={{ display: { xs: "none", md: "block" } }}
           >
             <SectionTitle>Horário</SectionTitle>
-            <Box component="ul" sx={{ "& li": { mb: 1 } }}>
+            <Box
+              component="ul"
+              sx={{
+                "& li": { mb: 1 },
+                listStyleType: "none",
+                paddingInlineStart: "0px",
+              }}
+            >
               {days.map((day) => (
                 <li key={day}>
                   {day}: {day === "Sunday" ? "CLOSED" : "10:00 — 19:30"}
@@ -241,7 +255,10 @@ const Footer = () => {
             >
               <Box>
                 <SectionTitle>Links</SectionTitle>
-                <Box component="ul" sx={{ "& li": { mb: 1 } }}>
+                <Box
+                  component="ul"
+                  sx={{ "& li": { mb: 1 }, listStyleType: "none" }}
+                >
                   {[
                     "About Us",
                     "Our Services",
@@ -249,7 +266,7 @@ const Footer = () => {
                     "Reviews",
                     "Follow Us",
                   ].map((link) => (
-                    <li key={link}>
+                    <li key={link} sx={{}}>
                       <Link href="#" color="inherit" underline="none">
                         {link}
                       </Link>

@@ -157,14 +157,20 @@ function Navbar() {
             <Logo
               sx={{
                 width: "100%",
-                maxWidth: { xs: "40px",sm:"85px", md: "107px", lg: "135px" },
+                maxWidth: { xs: "40px", sm: "85px", md: "107px", lg: "135px" },
                 height: "auto",
               }}
             />
             <LogoName
               sx={{
                 width: "100%",
-                maxWidth: { xs: "140px",sm:"150px", md: "189px", lg: "378px" },
+                maxWidth: {
+                  xs: "140px",
+                  sm: "150px",
+                  md: "189px",
+                  lg: "238px",
+                  xl: "378px",
+                },
                 height: "atuo",
               }}
             />

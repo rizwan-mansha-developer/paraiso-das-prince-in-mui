@@ -43,8 +43,10 @@ function Navbar() {
   };
 
   const handleScroll = () => {
-    const scrollTop = window.pageYOffset; // Access window globally
-    if (scrollTop > 990) {
+    const scrollTop = window.pageYOffset;
+    const viewHeight = window.innerHeight;
+
+    if (scrollTop > viewHeight) {
       setAppBarColor("#a4775e");
     } else {
       setAppBarColor("transparent");
@@ -120,7 +122,10 @@ function Navbar() {
           transition: "background-color 0.3s ease",
           boxShadow: "none",
           paddingX: { lg: "150px", xl: "250px" },
-          paddingTop: { lg: "18px", xl: "55px" },
+          marginTop: {
+            lg: appBarColor !== "transparent" ? "0px" : "18px",
+            xl: appBarColor !== "transparent" ? "0px" : "55px",
+          },
         }}
       >
         <Toolbar sx={{ paddingX: { lg: "0px" } }}>

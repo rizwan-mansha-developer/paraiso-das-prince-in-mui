@@ -55,7 +55,13 @@ const HeroSection = () => {
     >
       <Box
         sx={{
-          paddingTop: { xs: "495px", sm: "495px", md: "495px", lg: "331px" },
+          paddingTop: {
+            xs: "495px",
+            sm: "495px",
+            md: "495px",
+            lg: "200px",
+            xl: "331px",
+          },
           paddingLeft: { md: "28px", lg: "150px", xl: "250px" },
           width: "100%",
         }}
@@ -69,7 +75,7 @@ const HeroSection = () => {
               xs: "52px",
               sm: "80px",
               md: "112px",
-              lg: "112px",
+              lg: "100px",
               xl: "120px",
             },
             lineHeight: {
@@ -88,7 +94,7 @@ const HeroSection = () => {
           sx={{
             width: "100%",
             maxWidth: { md: "634px", lg: "643px" },
-            mb: 4,
+            mb: { xs: 4, lg: 3, xl: 4 },
             textTransform: "uppercase",
             fontWeight: 400,
             textAlign: { md: "start" },
@@ -130,7 +136,12 @@ const HeroSection = () => {
         <Box sx={{ paddingTop: "48px", display: { md: "none" } }}>
           <HeroSlider SliderContent={SliderContent} />
         </Box>
-        <Box sx={{ paddingTop: "48px", display: { md: "block" } }}>
+        <Box
+          sx={{
+            paddingTop: { xs: "48px", lg: "35px", xl: "48px" },
+            display: { md: "block" },
+          }}
+        >
           <ImagesGrid SliderContent={SliderContent} />
         </Box>
       </Box>

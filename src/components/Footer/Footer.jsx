@@ -25,9 +25,9 @@ const StyledFooter = styled(Box)(({ theme }) => ({
   color: "#494040",
   fontSize: "14px",
   fontWeight: 300,
-  fontFamily: "Mulish",
+  fontFamily: "mulish",
   letterSpacing: "normal",
-  padding: "50px 0",
+
   position: "relative",
 }));
 
@@ -109,7 +109,17 @@ const Footer = () => {
 
   return (
     <StyledFooter
-      sx={{ display: { lg: "flex" }, justifyContent: { lg: "center" } }}
+      sx={{
+        padding: {
+          xs: "50px 0",
+          md: "42px 0",
+          lg: "42px 150px",
+          xl: "91px 250px",
+        },
+        // display: { lg: "flex" },
+        // justifyContent: { lg: "center" },
+        // my: { lg: "150px", xl: "250px" },
+      }}
     >
       <StyledContainer>
         <Grid container spacing={{ xs: 2.5, md: 5 }}>
@@ -214,7 +224,11 @@ const Footer = () => {
           {/* Contact */}
           <Grid item xs={12} sm={6} md={3}>
             <Box
-              sx={{ display: "flex", justifyContent: "space-between", mb: 5 }}
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                mb: { xs: 5, lg: 0 },
+              }}
             >
               <SectionTitle>Contact</SectionTitle>
               <Box sx={{ display: { md: "none" } }}>
